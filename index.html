@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Delight - Your Cozy Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            color: #333;
+        }
+        .box{
+        width: 300px;
+        padding: 20px;
+        translate: 0 20px;
+        border: 1px solid #333;
+        position: sticky;
+        top: 20px;
+        }
+         .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      color: red;}
+
+        header {
+            background-color: #8B4513; /* Brown for a cafe theme */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #A0522D;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        @media (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+<div class="box" id="myBox">
+    <span class="close-btn" onclick="document.getElementById('myBox').style.display='none'">&times;</span>
+    <p>for ad purpose or promotion</p>
+  </div>
+        <h1>Cafe Delight</h1>
+        <p>Your go-to spot for coffee, pastries, and sandwiches </p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h2>Welcome to Cafe Delight</h2>
+        <img src="A cozy cafe exterior.png" alt="Cafe Interior" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+        <p>Enjoy freshly brewed coffee, delicious sandwiches, and a relaxing atmosphere. Perfect for work, meetings, or just unwinding.</p>
+    </section>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <div>
+                <h3>Espresso</h3>
+                <p>Rich and bold, made from premium beans.</p>
+            </div>
+            <img src="A coffee shop menu d.png" alt="Espresso">
+            <span>$1.66 or $3.50 (large)</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Croissant</h3>
+                <p>Flaky, buttery pastry baked fresh daily.</p>
+            </div>
+            <img src="A bakery menu design.png" alt="Croissant">
+            <span>$1.05 or $2.50 (large)</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Caprese Sandwich</h3>
+                <p>Tomato, mozzarella, basil on ciabatta.</p>
+            </div>
+            <img src="A stylish menu desig.png" alt="Caprese Sandwich">
+            <span>$3.25 or $5.50 (large)</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Latte</h3>
+                <p>Creamy and smooth, with a perfect balance of espresso and milk.</p>
+            </div>
+            <img src="A latte .png" alt="Latte">
+            <span>$2.50 or $4.00 (large)</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Blueberry Muffin</h3>
+                <p>Soft and moist, packed with fresh blueberries.</p>
+            </div>
+            <img src="A blue berry .png" alt="Blueberry Muffin">
+            <span>$1.50 or $2.75 (large)</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Turkey Club Sandwich</h3>
+                <p>Turkey, bacon, lettuce, tomato on toasted bread</p>
+            </div>
+            <img src="A turkey .png" alt="Turkey Club Sandwich">
+            <span>$2.00 or $3.50 (large)</span>
+       </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Cafe Delight has been serving the community since 2010. We're passionate about quality ingredients and creating a welcoming space for everyone. Located in the heart of downtown, we're open daily from 7 AM to 7 PM.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Address: 123 Main St, City, State 12345</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@cafedelight.com</p>
+        <p>Follow us on <a href="https://www.instagram.com/cafedelight.daily?igsh=Ym5qZnNhNXR3cGh5" style="color: #8B4513;">Instagram</a> </p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Cafe Delight. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Simple script to smooth scroll to sections
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
